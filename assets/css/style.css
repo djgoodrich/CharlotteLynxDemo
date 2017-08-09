@@ -1,0 +1,29 @@
+.topPage,
+.blue {
+    background-color: #0f5ddb !important;
+    color: white;
+    font-family: 'Proza Libre', sans-serif;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.grey {
+    background-color: #dce1e8;
+
+    box-shadow: 10px 10px 5px #888888;
+}
+
+tr {
+    border-bottom: solid 2px black;
+}
+
+.adder {
+    background-color: #0f5ddb !important;
+    color: white;
+    font-family: 'Proza Libre',
+    sans-serif;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.adder:hover {
+    background-color: black !important;
+}
