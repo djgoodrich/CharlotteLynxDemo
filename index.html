@@ -3,64 +3,71 @@
 
 <head>
     <meta charset="UTF-8">
-     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Proza+Libre" rel="stylesheet">
     <script src="https://use.fontawesome.com/f498ceb71a.js"></script>
-    
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Train Scheduler</title>
 </head>
 
 <body>
-	<div class="container">
-    <div class="jumbotron topPage text-center">
-        <h1><i class="fa fa-train" aria-hidden="true"></i> Lynx Train Scheduler</h1>
-        <p>Travel the Queen City</p>
-    </div>
-    <div class="panel panel-primary">
-        <div class="panel-heading blue">
-            <h3 class="panel-title">Current Train Schedule</h3>
+    <div class="container">
+        <div class="jumbotron topPage text-center">
+            <h1><i class="fa fa-train" aria-hidden="true"></i> Lynx Train Scheduler</h1>
+            <p>Travel the Queen City</p>
         </div>
-        <div class="panel-body grey">
-            <table class="table addedTrains">
-                <thead>
-                    <tr>
-                        <th>Train Name</th>
-                        <th>Destination</th>
-                        <th>Frequency (min)</th>
-                        <th>Next Arrival</th>
-                        <th>Minutes Away</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+        <div class="panel panel-primary">
+            <div class="panel-heading blue">
+                <h3 class="panel-title">Current Train Schedule</h3>
+            </div>
+            <div class="panel-body grey">
+                <table class="table addedTrains">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-    <form>
-        <div class="form-group">
-            <label for="trainName">Train Name</label>
-            <input class="form-control well" id="trainName" type="text">
+        <div class="row">
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input class="form-control well" id="trainName" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input class="form-control well" id="destination" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrain">First Train Time HH:mm - Military Time</label>
+                        <input class="form-control well" id="firstTrain" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input class="form-control well" id="frequency" type="number">
+                    </div>
+                    <button class="btn btn-primary adder" id="submitTrain" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <img src="assets/images/lynx.jpg" class="resize">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="destination">Destination</label>
-            <input class="form-control well" id="destination" type="text">
-        </div>
-        <div class="form-group">
-            <label for="firstTrain">First Train Time HH:mm - Military Time</label>
-            <input class="form-control well" id="firstTrain" type="text">
-        </div>
-        <div class="form-group">
-            <label for="frequency">Frequency (min)</label>
-            <input class="form-control well" id="frequency" type="number">
-        </div>
-        <button class="btn btn-primary adder" id="submitTrain" type="submit">Submit</button>
-    </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/javascript/trainscheduler.js"></script>
-    </body>
-        </html>
+</body>
+
+</html>
